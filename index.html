@@ -1,459 +1,1391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Harrison Leake | DJ & Producer | Bolton / Manchester</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Official website of Harrison Leake, a UK DJ and producer from Bolton / Manchester playing house, UK garage, minimal and club music.">
-  <meta name="keywords" content="Harrison Leake, Harrison Leake DJ, Bolton DJ, Manchester DJ, UK Garage DJ, House DJ, Minimal DJ">
-  <meta name="author" content="Harrison Leake">
+<title>Harrison Leake | DJ & Producer | Manchester UK</title>
 
-  <meta property="og:title" content="Harrison Leake | DJ & Producer">
-  <meta property="og:description" content="House, UK Garage, Minimal. Bolton / Manchester, UK.">
-  <meta property="og:type" content="website">
+<meta name="description"
+content="Official website of Harrison Leake, a DJ and producer from Bolton, Greater Manchester playing house, UK garage, minimal and underground club music.">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Harrison Leake",
-    "jobTitle": "DJ and Producer",
-    "description": "UK DJ and producer from Bolton / Manchester specialising in house, UK garage and minimal.",
-    "homeLocation": {
-      "@type": "Place",
-      "name": "Bolton, Greater Manchester, United Kingdom"
-    }
+<meta name="author" content="Harrison Leake">
+
+<meta property="og:title" content="Harrison Leake | DJ & Producer">
+<meta property="og:description" content="House · UK Garage · Minimal · Manchester UK">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harrison Leake",
+  "jobTitle": "DJ and Producer",
+  "description": "UK DJ and producer from Bolton, Greater Manchester specialising in house, UK garage and minimal.",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Bolton, Greater Manchester, United Kingdom"
   }
-  </script>
+}
+</script>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(61, 61, 61, 0.20), transparent 35%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06), transparent 40%),
-        #050505;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+/* ======================================
+   RESET
+====================================== */
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 7%;
-      background: rgba(5, 5, 5, 0.75);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .logo {
-      font-weight: 900;
-      letter-spacing: 2px;
-      font-size: 1.05rem;
-    }
+body {
+  background: #050505;
+  color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
 
-    nav .links {
-      display: flex;
-      gap: 26px;
-      font-size: 0.9rem;
-      color: #cfcfcf;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .hero {
-  min-height: 100vh;
+
+/* ======================================
+   GRAIN
+====================================== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .055;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+
+/* ======================================
+   NAVIGATION
+====================================== */
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 7% 70px;
+
+  padding: 28px 6%;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: .9rem;
+  letter-spacing: 3px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+
+  font-size: .7rem;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+  color: #c7c7c7;
+}
+
+
+/* ======================================
+   HERO
+====================================== */
+
+.hero {
+
+  min-height: 100vh;
+
   position: relative;
-  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 120px 6% 7%;
 
   background:
+
     linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.72)
+      90deg,
+      rgba(0,0,0,.82) 0%,
+      rgba(0,0,0,.38) 55%,
+      rgba(0,0,0,.25) 100%
     ),
+
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.75) 0%,
+      rgba(0,0,0,0) 55%
+    ),
+
     url("6FEC2738-D631-4132-A0B9-5B6828646FB8.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 620px;
-      height: 620px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.09), transparent 68%);
-      filter: blur(5px);
-    }
-  
-
-@keyframes heroMove {
-  from {
-    background-position: 42% center;
-  }
-
-  to {
-    background-position: 58% center;
-  }
-}
 }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-    }
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      color: #a7a7a7;
-      font-size: 0.76rem;
-      margin-bottom: 18px;
-    }
+.hero-number {
 
-    h1 {
-      font-size: clamp(3.6rem, 11vw, 8.4rem);
-      line-height: 0.86;
-      letter-spacing: -5px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
+  position: absolute;
 
-    .sub {
-      margin-top: 28px;
-      font-size: clamp(1rem, 3vw, 1.3rem);
-      color: #cfcfcf;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+  right: 6%;
+  top: 120px;
 
-    .location {
-      margin-top: 10px;
-      color: #777;
-      letter-spacing: 2px;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-    }
+  writing-mode: vertical-rl;
 
-    .buttons {
-      margin-top: 38px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+  letter-spacing: 4px;
+  font-size: .65rem;
 
-    .btn {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 14px 22px;
-      border-radius: 100px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      transition: 0.25s ease;
-      background: rgba(255,255,255,0.04);
-    }
+  color: rgba(255,255,255,.45);
+}
 
-    .btn:hover {
-      background: #fff;
-      color: #000;
-      transform: translateY(-2px);
-    }
 
-    .btn.primary {
-      background: #fff;
-      color: #000;
-    }
+.hero-content {
+  width: 100%;
+  max-width: 1150px;
+}
 
-    section {
-      padding: 110px 8%;
-      max-width: 1200px;
-      margin: auto;
-    }
 
-    .section-label {
-      color: #777;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      margin-bottom: 22px;
-    }
+.eyebrow {
 
-    h2 {
-      font-size: clamp(2.1rem, 6vw, 4rem);
-      line-height: 1;
-      margin-bottom: 26px;
-      letter-spacing: -2px;
-    }
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
-    .about p {
-      max-width: 760px;
-      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
-      color: #bdbdbd;
-    }
+  margin-bottom: 20px;
 
-    .genre-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 38px;
-    }
+  text-transform: uppercase;
 
-    .genre {
-      min-height: 150px;
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 22px;
-      display: flex;
-      align-items: flex-end;
-      padding: 24px;
-      font-size: 1.3rem;
-      font-weight: 800;
-      background:
-        linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
-    }
+  letter-spacing: 5px;
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 35px;
-    }
+  font-size: .65rem;
+  font-weight: bold;
 
-    .card {
-      padding: 28px;
-      min-height: 220px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: rgba(255,255,255,0.025);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: 0.25s ease;
-    }
+  color: rgba(255,255,255,.75);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,255,255,0.25);
-    }
 
-    .card span {
-      color: #777;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+.eyebrow::before {
 
-    .card h3 {
-      font-size: 1.6rem;
-      margin-top: 10px;
-    }
+  content: "";
 
-    .arrow {
-      font-size: 1.4rem;
-      margin-top: 30px;
-    }
+  width: 42px;
+  height: 1px;
 
-    .booking {
-      text-align: center;
-      padding-top: 140px;
-      padding-bottom: 140px;
-    }
+  background: rgba(255,255,255,.7);
+}
 
-    .booking h2 {
-      font-size: clamp(2.8rem, 8vw, 6rem);
-    }
 
-    .booking p {
-      color: #999;
-      margin: 16px auto 30px;
-      max-width: 580px;
-    }
+h1 {
 
-    footer {
-      padding: 30px 8% 50px;
-      text-align: center;
-      color: #666;
-      font-size: 0.8rem;
-    }
+  font-size: clamp(4.5rem, 13vw, 10rem);
 
-    @media(max-width: 760px) {
-      nav .links {
-        display: none;
-      }
+  line-height: .78;
 
-      h1 {
-        letter-spacing: -3px;
-      }
+  font-weight: 900;
 
-      .genre-grid,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+  letter-spacing: -7px;
 
-      section {
-        padding: 85px 6%;
-      }
+  text-transform: uppercase;
+}
 
-      .hero {
-        padding-left: 6%;
-        padding-right: 6%;
-      }
-    }
-  </style>
+
+.hero-bottom {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-top: 45px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+
+
+.hero-description {
+
+  font-size: .75rem;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  line-height: 2;
+
+  color: #d1d1d1;
+}
+
+
+.hero-buttons {
+
+  display: flex;
+  gap: 12px;
+}
+
+
+.btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 100px;
+
+  border: 1px solid rgba(255,255,255,.4);
+
+  font-size: .72rem;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition: .25s;
+}
+
+
+.btn:hover {
+
+  background: #fff;
+  color: #000;
+}
+
+
+.btn-white {
+
+  background: #fff;
+  color: #000;
+}
+
+
+/* ======================================
+   BIG STRIP
+====================================== */
+
+.strip {
+
+  overflow: hidden;
+
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+
+  padding: 22px 0;
+
+  background: #080808;
+}
+
+
+.strip-text {
+
+  white-space: nowrap;
+
+  font-size: clamp(1.5rem, 5vw, 3.8rem);
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  text-transform: uppercase;
+
+  color: #e6e6e6;
+}
+
+
+/* ======================================
+   GENERAL SECTIONS
+====================================== */
+
+section.content {
+
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 130px 7%;
+}
+
+
+.label {
+
+  font-size: .65rem;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #6f6f6f;
+
+  margin-bottom: 30px;
+}
+
+
+.big-heading {
+
+  font-size: clamp(3rem, 8vw, 6rem);
+
+  line-height: .9;
+
+  letter-spacing: -4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 55px;
+}
+
+
+/* ======================================
+   ABOUT
+====================================== */
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+
+.about-big {
+
+  font-size: clamp(1.7rem, 4vw, 3rem);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+}
+
+
+.about-text {
+
+  color: #9e9e9e;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+.about-meta {
+
+  margin-top: 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+}
+
+
+.meta {
+
+  padding: 18px 0;
+
+  border-top: 1px solid #292929;
+}
+
+
+.meta small {
+
+  display: block;
+
+  color: #666;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-size: .6rem;
+
+  margin-bottom: 8px;
+}
+
+
+.meta strong {
+
+  font-size: .9rem;
+
+  text-transform: uppercase;
+}
+
+
+/* ======================================
+   SOUND
+====================================== */
+
+.sound {
+
+  background: #efefeb;
+
+  color: #080808;
+}
+
+
+.sound .label {
+  color: #686868;
+}
+
+
+.genre-list {
+
+  border-top: 1px solid #bdbdb8;
+}
+
+
+.genre {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid #bdbdb8;
+}
+
+
+.genre-name {
+
+  font-size: clamp(2.2rem, 7vw, 5rem);
+
+  font-weight: 900;
+
+  letter-spacing: -4px;
+
+  text-transform: uppercase;
+}
+
+
+.genre-number {
+
+  font-size: .7rem;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+
+/* ======================================
+   FEATURED MUSIC
+====================================== */
+
+.feature-card {
+
+  min-height: 460px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 40px;
+
+  border: 1px solid #252525;
+
+  background:
+
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(255,255,255,.1),
+      transparent 35%
+    ),
+
+    #0b0b0b;
+}
+
+
+.feature-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #777;
+
+  letter-spacing: 3px;
+
+  font-size: .6rem;
+
+  text-transform: uppercase;
+}
+
+
+.feature-title {
+
+  font-size: clamp(3rem, 9vw, 7rem);
+
+  letter-spacing: -5px;
+
+  line-height: .85;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+.feature-bottom {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-top: 1px solid #2a2a2a;
+
+  padding-top: 22px;
+}
+
+
+.play {
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: black;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+}
+
+
+/* ======================================
+   EVENTS
+====================================== */
+
+.event {
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr auto;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 30px 0;
+
+  border-top: 1px solid #242424;
+}
+
+
+.event:last-child {
+
+  border-bottom: 1px solid #242424;
+}
+
+
+.event-date {
+
+  font-size: .7rem;
+
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+
+.event-name {
+
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+
+.event-location {
+
+  font-size: .65rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+
+/* ======================================
+   SOCIAL GRID
+====================================== */
+
+.social-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+
+.social-card {
+
+  aspect-ratio: 1 / .72;
+
+  padding: 30px;
+
+  border: 1px solid #252525;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: #090909;
+
+  transition: .25s;
+}
+
+
+.social-card:hover {
+
+  background: #f1f1ed;
+
+  color: #090909;
+}
+
+
+.social-card small {
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  font-size: .6rem;
+
+  color: #666;
+}
+
+
+.social-card h3 {
+
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+
+  text-transform: uppercase;
+
+  letter-spacing: -2px;
+}
+
+
+/* ======================================
+   BOOKINGS
+====================================== */
+
+.booking {
+
+  min-height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 7%;
+
+  border-top: 1px solid #222;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.08),
+      transparent 45%
+    ),
+
+    #050505;
+}
+
+
+.booking-inner {
+  max-width: 900px;
+}
+
+
+.booking-small {
+
+  font-size: .65rem;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+
+.booking h2 {
+
+  font-size: clamp(4rem, 12vw, 9rem);
+
+  letter-spacing: -7px;
+
+  line-height: .8;
+
+  text-transform: uppercase;
+}
+
+
+.booking p {
+
+  color: #888;
+
+  margin: 35px auto;
+
+  max-width: 500px;
+
+  line-height: 1.8;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 35px 6%;
+
+  border-top: 1px solid #222;
+
+  font-size: .6rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #666;
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media(max-width: 750px) {
+
+  nav {
+    padding: 24px 6%;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .hero {
+
+    min-height: 100svh;
+
+    padding: 120px 6% 8%;
+
+    background-position: 62% center;
+  }
+
+  h1 {
+
+    letter-spacing: -4px;
+
+    font-size: clamp(4.2rem, 20vw, 6.4rem);
+  }
+
+  .hero-bottom {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+  .hero-number {
+    display: none;
+  }
+
+  section.content {
+
+    padding: 90px 6%;
+  }
+
+  .about-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .social-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .event {
+
+    grid-template-columns: 70px 1fr;
+  }
+
+  .event-location {
+
+    grid-column: 2;
+  }
+
+  .feature-card {
+
+    min-height: 380px;
+
+    padding: 25px;
+  }
+
+  footer {
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <nav>
-    <div class="logo">HARRISON LEAKE</div>
 
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#music">Music</a>
-      <a href="#bookings">Bookings</a>
-    </div>
-  </nav>
+<nav>
 
+<div class="logo">
+HARRISON LEAKE
+</div>
 
-  <main>
+<div class="nav-right">
 
-    <section class="hero">
+<a href="#about">About</a>
 
-      <div class="hero-content">
+<a href="#music">Music</a>
 
-        <div class="eyebrow">DJ · PRODUCER · UK</div>
+<a href="#events">Events</a>
 
-        <h1>Harrison<br>Leake</h1>
+<a href="#contact">Bookings</a>
 
-        <div class="sub">
-          House · UK Garage · Minimal
-        </div>
+</div>
 
-        <div class="location">
-          Bolton / Manchester
-        </div>
-
-        <div class="buttons">
-          <a class="btn primary" href="#music">Listen</a>
-          <a class="btn" href="#bookings">Bookings</a>
-        </div>
-
-      </div>
-
-    </section>
+</nav>
 
 
-    <section class="about" id="about">
 
-      <div class="section-label">About</div>
-
-      <h2>Built for the dancefloor.</h2>
-
-      <p>
-        Harrison Leake is a UK DJ and producer from Bolton, Greater Manchester,
-        bringing together house, UK garage and minimal influences with
-        rolling basslines, groove-led selections and high-energy club music.
-      </p>
-
-      <div class="genre-grid">
-        <div class="genre">HOUSE</div>
-        <div class="genre">UK GARAGE</div>
-        <div class="genre">MINIMAL</div>
-        <div class="genre">CLUB</div>
-      </div>
-
-    </section>
+<main>
 
 
-    <section id="music">
+<!-- HERO -->
 
-      <div class="section-label">Connect</div>
+<section class="hero">
 
-      <h2>Music & socials.</h2>
-
-      <div class="cards">
-
-        <a class="card" href="https://on.soundcloud.com/A756Gl9GJCFT42DvFI" target="_blank">
-          <div>
-            <span>Listen</span>
-            <h3>SoundCloud</h3>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="card" href="https://www.instagram.com/harrisonleake_?utm_source=qr" target="_blank">
-          <div>
-            <span>Follow</span>
-            <h3>Instagram</h3>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-        <a class="card" href="https://www.tiktok.com/@harrisonleake_?_r=1&_t=ZN-992aXZr9Ies" target="_blank">
-          <div>
-            <span>Watch</span>
-            <h3>TikTok</h3>
-          </div>
-          <div class="arrow">↗</div>
-        </a>
-
-      </div>
-
-    </section>
+<div class="hero-number">
+HL / 001 — MANCHESTER UK
+</div>
 
 
-    <section class="booking" id="bookings">
+<div class="hero-content">
 
-      <div class="section-label">Bookings</div>
+<div class="eyebrow">
+DJ · PRODUCER · UK
+</div>
 
-      <h2>Let's make<br>some noise.</h2>
-
-      <p>
-        For bookings, events, collaborations and enquiries.
-      </p>
-
-      <a class="btn primary" href="mailto:harrisonleake.enquiries@gmail.com">
-        Booking Enquiries
-      </a>
-
-    </section>
-
-  </main>
+<h1>
+Harrison<br>
+Leake
+</h1>
 
 
-  <footer>
-    © 2026 Harrison Leake · DJ & Producer · Bolton / Manchester, UK
-  </footer>
+<div class="hero-bottom">
+
+<div class="hero-description">
+
+HOUSE · UK GARAGE · MINIMAL<br>
+
+BOLTON / MANCHESTER
+
+</div>
+
+
+<div class="hero-buttons">
+
+<a href="#music" class="btn btn-white">
+Listen
+</a>
+
+<a href="#contact" class="btn">
+Bookings
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TEXT STRIP -->
+
+<div class="strip">
+
+<div class="strip-text">
+
+HOUSE ★ UK GARAGE ★ MINIMAL ★ AFTER DARK ★ HARRISON LEAKE ★ HOUSE ★ UK GARAGE ★ MINIMAL ★
+
+</div>
+
+</div>
+
+
+
+<!-- ABOUT -->
+
+<section class="content" id="about">
+
+<div class="label">
+01 / About
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="about-big">
+
+Built around groove.<br>
+Made for late nights.
+
+</div>
+
+
+<div>
+
+<p class="about-text">
+
+Harrison Leake is a UK DJ and producer from Bolton,
+Greater Manchester.
+
+Blending house, UK garage and minimal influences,
+his sound centres around rolling basslines,
+groove-led selections and high-energy club music.
+
+</p>
+
+
+<div class="about-meta">
+
+<div class="meta">
+
+<small>Based</small>
+
+<strong>Manchester UK</strong>
+
+</div>
+
+
+<div class="meta">
+
+<small>Sound</small>
+
+<strong>House / UKG</strong>
+
+</div>
+
+
+<div class="meta">
+
+<small>Format</small>
+
+<strong>DJ Sets</strong>
+
+</div>
+
+
+<div class="meta">
+
+<small>Bookings</small>
+
+<strong>Available</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SOUND -->
+
+<section class="sound">
+
+<section class="content">
+
+<div class="label">
+02 / The Sound
+</div>
+
+<h2 class="big-heading">
+No boxes.<br>
+Just groove.
+</h2>
+
+
+<div class="genre-list">
+
+
+<div class="genre">
+
+<div class="genre-number">
+001
+</div>
+
+<div class="genre-name">
+House
+</div>
+
+</div>
+
+
+<div class="genre">
+
+<div class="genre-number">
+002
+</div>
+
+<div class="genre-name">
+UK Garage
+</div>
+
+</div>
+
+
+<div class="genre">
+
+<div class="genre-number">
+003
+</div>
+
+<div class="genre-name">
+Minimal
+</div>
+
+</div>
+
+
+<div class="genre">
+
+<div class="genre-number">
+004
+</div>
+
+<div class="genre-name">
+Club
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+</section>
+
+
+
+<!-- MUSIC -->
+
+<section class="content" id="music">
+
+<div class="label">
+03 / Featured Music
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-top">
+
+<span>Harrison Leake</span>
+
+<span>SoundCloud / 2026</span>
+
+</div>
+
+
+<div class="feature-title">
+
+Listen<br>
+Now.
+
+</div>
+
+
+<div class="feature-bottom">
+
+<div>
+
+<div style="
+font-size:.65rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#777;
+margin-bottom:8px;
+">
+
+Selected mixes + music
+
+</div>
+
+<strong>
+HARRISON LEAKE
+</strong>
+
+</div>
+
+
+<a href="#" class="play">
+▶
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EVENTS -->
+
+<section class="content" id="events">
+
+<div class="label">
+04 / Events
+</div>
+
+<h2 class="big-heading">
+Into the<br>
+night.
+</h2>
+
+
+<div class="event">
+
+<div class="event-date">
+2026
+</div>
+
+<div class="event-name">
+Upcoming Dates
+</div>
+
+<div class="event-location">
+Coming Soon
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-date">
+UK
+</div>
+
+<div class="event-name">
+Bookings
+</div>
+
+<div class="event-location">
+Open
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- SOCIAL -->
+
+<section class="content">
+
+<div class="label">
+05 / Follow
+</div>
+
+
+<div class="social-grid">
+
+
+<a class="social-card" href="#" target="_blank">
+
+<small>Listen</small>
+
+<h3>
+SoundCloud ↗
+</h3>
+
+</a>
+
+
+<a class="social-card" href="#" target="_blank">
+
+<small>Follow</small>
+
+<h3>
+Instagram ↗
+</h3>
+
+</a>
+
+
+<a class="social-card" href="#" target="_blank">
+
+<small>Watch</small>
+
+<h3>
+TikTok ↗
+</h3>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- BOOKINGS -->
+
+<section class="booking" id="contact">
+
+<div class="booking-inner">
+
+<div class="booking-small">
+Bookings / Enquiries / Collaborations
+</div>
+
+<h2>
+
+Make<br>
+Some<br>
+Noise.
+
+</h2>
+
+<p>
+
+For DJ bookings, events, collaborations and professional enquiries.
+
+</p>
+
+<a
+href="mailto:YOURBOOKINGEMAIL@example.com"
+class="btn btn-white">
+
+Get In Touch
+
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div>
+© 2026 Harrison Leake
+</div>
+
+<div>
+DJ / Producer — Manchester UK
+</div>
+
+</footer>
+
 
 </body>
+
 </html>
