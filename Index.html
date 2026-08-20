@@ -1,1 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Harrison Leake | DJ & Producer | Bolton / Manchester</title>
+
+  <meta name="description" content="Official website of Harrison Leake, a UK DJ and producer from Bolton / Manchester playing house, UK garage, minimal and club music.">
+  <meta name="keywords" content="Harrison Leake, Harrison Leake DJ, Bolton DJ, Manchester DJ, UK Garage DJ, House DJ, Minimal DJ">
+  <meta name="author" content="Harrison Leake">
+
+  <meta property="og:title" content="Harrison Leake | DJ & Producer">
+  <meta property="og:description" content="House, UK Garage, Minimal. Bolton / Manchester, UK.">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harrison Leake",
+    "jobTitle": "DJ and Producer",
+    "description": "UK DJ and producer from Bolton / Manchester specialising in house, UK garage and minimal.",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Bolton, Greater Manchester, United Kingdom"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(61, 61, 61, 0.20), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06), transparent 40%),
+        #050505;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      background: rgba(5, 5, 5, 0.75);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 1.05rem;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 26px;
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 7% 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.09), transparent 68%);
+      filter: blur(5px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #a7a7a7;
+      font-size: 0.76rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3.6rem, 11vw, 8.4rem);
+      line-height: 0.86;
+      letter-spacing: -5px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sub {
+      margin-top: 28px;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      color: #cfcfcf;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .location {
+      margin-top: 10px;
+      color: #777;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .buttons {
+      margin-top: 38px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 14px 22px;
+      border-radius: 100px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: 0.25s ease;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .btn.primary {
+      background: #fff;
+      color: #000;
+    }
+
+    section {
+      padding: 110px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #777;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 6vw, 4rem);
+      line-height: 1;
+      margin-bottom: 26px;
+      letter-spacing: -2px;
+    }
+
+    .about p {
+      max-width: 760px;
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+      color: #bdbdbd;
+    }
+
+    .genre-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .genre {
+      min-height: 150px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 22px;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 28px;
+      min-height: 220px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.025);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .card span {
+      color: #777;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-top: 10px;
+    }
+
+    .arrow {
+      font-size: 1.4rem;
+      margin-top: 30px;
+    }
+
+    .booking {
+      text-align: center;
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    .booking h2 {
+      font-size: clamp(2.8rem, 8vw, 6rem);
+    }
+
+    .booking p {
+      color: #999;
+      margin: 16px auto 30px;
+      max-width: 580px;
+    }
+
+    footer {
+      padding: 30px 8% 50px;
+      text-align: center;
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    @media(max-width: 760px) {
+      nav .links {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .genre-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 85px 6%;
+      }
+
+      .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">HARRISON LEAKE</div>
+
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#music">Music</a>
+      <a href="#bookings">Bookings</a>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">DJ · PRODUCER · UK</div>
+
+        <h1>Harrison<br>Leake</h1>
+
+        <div class="sub">
+          House · UK Garage · Minimal
+        </div>
+
+        <div class="location">
+          Bolton / Manchester
+        </div>
+
+        <div class="buttons">
+          <a class="btn primary" href="#music">Listen</a>
+          <a class="btn" href="#bookings">Bookings</a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+      <div class="section-label">About</div>
+
+      <h2>Built for the dancefloor.</h2>
+
+      <p>
+        Harrison Leake is a UK DJ and producer from Bolton, Greater Manchester,
+        bringing together house, UK garage and minimal influences with
+        rolling basslines, groove-led selections and high-energy club music.
+      </p>
+
+      <div class="genre-grid">
+        <div class="genre">HOUSE</div>
+        <div class="genre">UK GARAGE</div>
+        <div class="genre">MINIMAL</div>
+        <div class="genre">CLUB</div>
+      </div>
+
+    </section>
+
+
+    <section id="music">
+
+      <div class="section-label">Connect</div>
+
+      <h2>Music & socials.</h2>
+
+      <div class="cards">
+
+        <a class="card" href="https://on.soundcloud.com/A756Gl9GJCFT42DvFI" target="_blank">
+          <div>
+            <span>Listen</span>
+            <h3>SoundCloud</h3>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+        <a class="card" href="https://www.instagram.com/harrisonleake_?utm_source=qr" target="_blank">
+          <div>
+            <span>Follow</span>
+            <h3>Instagram</h3>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+        <a class="card" href="https://www.tiktok.com/@harrisonleake_?_r=1&_t=ZN-992aXZr9Ies" target="_blank">
+          <div>
+            <span>Watch</span>
+            <h3>TikTok</h3>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="booking" id="bookings">
+
+      <div class="section-label">Bookings</div>
+
+      <h2>Let's make<br>some noise.</h2>
+
+      <p>
+        For bookings, events, collaborations and enquiries.
+      </p>
+
+      <a class="btn primary" href="mailto:harrisonleake.enquiries@gmail.com">
+        Booking Enquiries
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Harrison Leake · DJ & Producer · Bolton / Manchester, UK
+  </footer>
+
+</body>
+</html>
