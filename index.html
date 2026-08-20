@@ -114,6 +114,19 @@
       background: radial-gradient(circle, rgba(255,255,255,0.09), transparent 68%);
       filter: blur(5px);
     }
+    .hero {
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    background-size: 100%;
+  }
+
+  to {
+    background-size: 108%;
+  }
+}
 
     .hero-content {
       position: relative;
